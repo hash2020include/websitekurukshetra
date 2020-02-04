@@ -1,0 +1,58 @@
+{% load staticfiles %}
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head><link rel="stylesheet" href="{% static "css/register.css"%}">
+    </head>
+<body>
+     <header>
+     <nav>
+      <h1>Kihtrak books</h1>
+      <ul>
+          <li><a data-page="home" href="{% url 'home' %}">home</a></li>
+          <li><a data-page="about" href="{% url 'home'%}">about</a></li>
+          <li><a data-page="contact" href="{% url 'home'%}">contact</a></li>
+          <div class="bubble"></div>
+          {% if user.is_authenticated %}
+            <li><a class="l" href="{% url 'logout' %}">Logout</a></li>
+          {% else %}
+            <li><a class="l" href="{% url 'basic_app:user_login' %}">Login</a></li>
+          {% endif %}
+      </ul>
+    </nav>
+    </header>
+    <section>
+        <div class="box">
+            <h2>Login</h2>
+            <form enctype="multipart/form-data" method="POST">
+              {% csrf_token%}
+              <div  class="inputbox">
+                <input type="text" name="username" maxlength="150" required id="id_username">
+                <label for="id_username">Username:</label>
+              </div>
+              <div  class="inputbox">
+                <input type="email" name="email" maxlength="254" id="id_email">
+                <label for="id_email">Email address:</label>
+             </div>
+             <div  class="inputbox">
+              <input type="password" name="password" required id="id_password">
+              <label for="id_password">Password:</label>
+             </div>
+             <div class="inputbox">
+               <input type="text" name="number" maxlength="10" id="id_number" required >
+               <lable for="id_number">number:</lable>
+             </div>
+            <div  class="inputbox">
+             <input type="url" name="portfolio_site" maxlength="200" id="id_portfolio_site">
+             <label for="id_portfolio_site">Portfolio site:</label>
+           </div>
+           <div  class="inputbox">
+             <input type="file" name="profile_pic" accept="image/*" id="id_profile_pic">
+             <label for="id_profile_pic">Profile pic:</label>
+           </div>
+          <input type="submit" name="" value="Register">
+    </form>
+    </div>
+    </section>
+    <script src="{% static "js/register.js"%}"></script>
+    </body>
+</html>
