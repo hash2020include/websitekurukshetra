@@ -1,0 +1,165 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lucida Sans';
+}
+header
+{
+    box-shadow: rgba(0,0, 0, 0.3);
+    position: sticky;
+    top:0px;
+    background: white;
+}
+nav{
+    min-height: 10vh;
+    margin: auto;
+    width: 90%;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+nav h1, nav ul{
+    font-size: 1.5rem;
+    flex:1;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+nav a{
+    color: black;
+    text-decoration: none;
+}
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+section h2 {
+    font-size: 5rem;
+    color:white;
+}
+.l{
+   background-color:green; 
+   padding:10px;
+   border-radius: 10px;
+}
+.home
+{
+    background: linear-gradient(to right top,#DE6262,#FFB88C);
+}
+.about
+{
+    background: linear-gradient(to right top,#4b6cb7,#182848);
+}
+.contact
+{
+    background: linear-gradient(to right top,#f857a6,#ff5858);
+}
+.bubble{
+    position: absolute;
+    z-index: -2;
+    background: linear-gradient(to right top,#DE6262,#FFB88C);
+    transform: scale(2);
+    transition: all 0.5s ease;
+}
+.box
+{
+    position: absolute;
+
+    width: 50%;
+    padding:40px;
+    background: white;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(109, 103, 103, 0.5);
+    border-radius: 10px;
+}
+.box .inputbox
+{
+    position: relative;
+}
+.box .radio
+{
+  padding: 15px 0;
+}
+.box .inputbox input{
+    width:85%;
+    padding:10px 0;
+    font-size:16px; 
+    color: black;  
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    background: transparent;
+}
+.box .inputbox label{
+    position: absolute;
+    top:0;
+    left:0;
+    padding:10px 0;
+    font-size:20px;  
+    margin-bottom: 30px;
+    pointer-events: none; 
+    transition: .5s; 
+}
+.box .inputbox input:focus ~ label,
+.box .inputbox input:valid ~ label
+{
+    top: -18px;
+    left:0;
+    color:black;
+    font-size:14px;
+}
+.box input[type="submit"]
+{
+   background: transparent;
+   color: blanchedalmond;
+   border: none;           
+   outline: none;
+   background: rgba(0, 0, 0, 0.404); 
+   padding: 10px 20px;
+   text-align: center;
+   border-radius: 5px;
+}
+.box input[type="submit"]:hover{
+  cursor: pointer;
+  background:rgba(0, 0, 0, 0.7) ;
+}
+.box input[type="button"]
+{
+   background: transparent;
+   color: blanchedalmond;
+   border: none;
+   outline: none;
+   background: rgba(0, 0, 0, 0.404); 
+   padding: 10px 20px;
+   border-radius: 5px;
+}
+.box .ta textarea{
+    border: 1px solid black;
+    color:black;
+    font-size: 20px ;
+    padding: 5px;
+}
+.select select
+{
+ min-width: 85%; 
+ padding-bottom: 5px;  
+ margin-bottom: 30px;
+ border: none;
+ border-bottom: 1px solid black;
+ outline: none;
+ background: transparent;
+ text-align: center;
+}
+.select select option
+{
+  background: rgba(255, 254, 254, 0.4);
+  text-align: center;
+}

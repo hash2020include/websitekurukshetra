@@ -1,0 +1,87 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="signup.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+var k=/^[A-Z a-z]+$/;
+function v(){
+if(!document.getElementById("t1").value.match(k)||!document.getElementById("t2").value.match(k)){
+window.alert("Enter a valid Name");
+return false;
+}
+}
+function age()
+{
+  var x= document.getElementById("t3").value;
+  if(isNaN(x)){document.getElementById("s1").innerHTML="enter valid input";}
+  else{document.getElementById("s1").innerHTML="";}
+}
+function pn()
+{
+   var x= document.getElementById("t4").value;
+   if(isNaN(x)){document.getElementById("s2").innerHTML="enter valid input";}
+   else{document.getElementById("s2").innerHTML="";}
+}
+function change()
+{
+   var x= document.getElementById("t1").value;
+   document.getElementById("t1").value=x.toUpperCase();
+   var y= document.getElementById("t2").value;
+   document.getElementById("t2").value=y.toUpperCase();
+}
+</script>
+</head>
+<body>
+  <div class="nav">
+<ul>
+  <li><a href="home.html">Home</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+  </div>
+<div class ="box">
+<form id="f" onsubmit="return v()" action="home.html" method="post">
+<div  class="inputbox">
+  <input type="text" id="t1" onchange="return change()" required>
+  <label>First Name</label>
+</div>
+<div class="inputbox">
+  <input type="text" id="t2" onchange="return change()" required>
+  <label>Last Name</label>
+</div>
+<div class="inputbox">
+  <input type="text" id="t4" onkeyup="pn()"required><br><span style="color:red" id="s2"></span>
+  <label>Mobile Number</label>
+</div>
+<div class="radio">
+  <label>Gender</label>
+  <input type="radio" name="r1">
+  <label>Male</label>
+  <input type="radio" name="r1">
+  <label>Female</label>
+</div>
+<div class="inputbox">
+<input type="email" id="e1" required>
+<label>Email</label>
+</div>
+<div class="select">
+  <select  id="s1" >
+    <option value=-1 >SELECT BRANCH</option>
+   <option value=1 >CSE</option>
+   <option value=2 >MECH</option>
+   <option value=3 >ECE</option>
+   <option value=4 >EEE</option>
+   </select>
+</div>
+<div class="checkbox">
+<input type="checkbox" required>
+<label> Accept all Terms and Conditions</label>
+</div>
+<br>
+<center>
+<input type="submit" value="Submit">
+</center>
+</form>
+</table></div>
+</body>
+</html>

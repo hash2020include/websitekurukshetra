@@ -1,0 +1,60 @@
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head><link rel="stylesheet" href="home.css">
+    </head>
+<body>
+<header>
+  <nav>
+    <h1>AYTIDA university</h1>
+    <ul>
+        <li><a data-page="home" href="#home">home</a></li>
+        <li><a data-page="about" href="#about">about</a></li>
+        <li><a data-page="contact" href="#contact">contact</a></li>
+        <li><a class="l" href="register.html">Apply</a></li>
+        <div class="bubble"></div>
+    </ul>
+</nav>
+</header>
+      <section class="home" id="home">
+      <div class="welcome" id="home">
+    </div>
+      </section>
+      <section class="about" id="about">
+
+ 
+      </section>
+      <section class="contact" id="contact">
+        <div class="box">
+          <form id="f" onsubmit="return v()" action="home.html" method="post">
+            <div  class="inputbox">
+              <input type="text" id="t1" onchange="return change()" required>
+              <label>First Name</label>
+            </div>
+            <div class="inputbox">
+              <input type="text" id="t2" onchange="return change()" required>
+              <label>Last Name</label>
+            </div>
+                <div class="inputbox">
+                <input type="email" id="e1" required>
+                <label>Email</label>
+                </div>
+            <div class="inputbox">
+              <input type="text" id="t4" onkeyup="pn()"required><br>
+              <label>Mobile Number</label>
+            </div>
+            <br>
+            <div class="ta">
+              <textarea rows="5" cols="50" placeholder="content" required></textarea>
+            </div>
+            <center>
+            <input type="submit" value="send">
+            </center>
+            </form>
+      </div>
+
+        
+      </section>
+    </div>
+    <script src="./home.js"></script>
+    </body>
+</html>
